@@ -2,7 +2,7 @@
 
 <a href="https://www.packtpub.com/product/building-low-latency-applications-with-c/9781837639359"><img src="https://content.packt.com/B19434/cover_image_small.jpg" alt="Building Low Latency Applications with C++" height="256px" align="right"></a>
 
-This is the code repository for [Building Low Latency Applications with C++](https://www.packtpub.com/product/building-low-latency-applications-with-c/9781837639359), published by Packt.
+This is the learning repository for the book [Building Low Latency Applications with C++](https://www.packtpub.com/product/building-low-latency-applications-with-c/9781837639359), published by Packt.
 
 **Develop a complete low latency trading ecosystem from scratch using modern C++**
 
