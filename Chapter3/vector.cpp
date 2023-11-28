@@ -17,7 +17,7 @@ int main() {
   std::cout << "No vectorization: " << duration.count() << " ns\n";
 
   auto start2 = std::chrono::high_resolution_clock::now();
-  // vectorization
+  // vectorization (at most 4 elements at at time)
   for (size_t i = 0; i < size; i += 4) {
     y[i] = a[i] + b[i];
     y[i + 1] = a[i + 1] + b[i + 1];
