@@ -34,7 +34,24 @@ LargeClassWithConstructor createLargeClass(int i , char c, double d){
   return temp;
 }
 
+// the copy constructor often copy the data with a constant reference to avoid the original data being modified during the copy.
+// After the modification, the original data and the copied data are independent no matter whether the original data has been passed by constant reference or not.
 
+//*********************************************************************************************************************
+// The example that put the function and the struct in the same namespace
+
+namespace ReturnValueOptimization{
+  struct LargeClass{
+    int i;
+    char c;
+    void display(){
+      std::cout << "i: " << i << ", c: " << c << std::endl;
+    }
+  };
+  LargeClass rvoExample(int i, char c){
+    return LargeClass{i, c};
+  }
+}
 
 int main() {
   LargeClass lc_obj = rvoExample(10, 'c', 3.14);
@@ -46,4 +63,6 @@ int main() {
   lcc_obj.i = 20;
   lcc_obj.display();
   lcc_obj2.display();
+  ReturnValueOptimization::LargeClass lc_obj2 = ReturnValueOptimization::rvoExample(10, 'c');
+  lc_obj2.display();
 }
