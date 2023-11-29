@@ -35,6 +35,19 @@ public:
   }
 };
 
+/*
+Pros:
+1. The CRTP enables static polymorphism, where the method to be called is determined at compile time, not at runtime.
+2. NO Virtual Function Table Overhead: Since CRTP does not rely on virtual functions, it deos not incur the overhead associated with the VTable, which is 
+used in dynamic polymorphism for runtime method resolution.
+3. CRTP provides a safe way to downcast from the base to the derived class without the need for "dynamic_cast" or RTTI.
+Cons:
+1. Code complexity.
+2. Maintenance Challenges
+3. Compile-time errors are harder to debug than runtime errors.
+4. Increased Compile Time.
+5. Limited to static polymorphism.
+*/
 int main(int, char **) {
   RuntimeExample *runtime_example = new SpecificRuntimeExample();
   runtime_example->placeOrder();
