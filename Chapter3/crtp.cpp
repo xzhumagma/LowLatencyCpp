@@ -1,5 +1,5 @@
 #include <cstdio>
-
+// inheritance example
 class RuntimeExample {
 public:
   virtual void placeOrder() {
@@ -14,10 +14,12 @@ public:
   }
 };
 
+//CRTP Example
 template<typename actual_type>
 class CRTPExample {
 public:
   void placeOrder() {
+    // cast the this pointer to the actual type
     static_cast<actual_type *>(this)->actualPlaceOrder();
   }
 
