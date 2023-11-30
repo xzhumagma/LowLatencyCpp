@@ -4,11 +4,20 @@ struct MyStruct {
   int d_[3];
 };
 
-int main(int, char **) {
-  using namespace Common;
+template<typename T>
+bool checkIfFree(const Common::MemPool<T> &pool, std::size_t index) {
+  try {
+    return pool.isFreeAtIndex(index);
+  } catch (const std::out_of_range &e) {
+    std::cerr << "Error: " << e.what() << std::endl;
+  }
+}
 
-  MemPool<double> prim_pool(50);
-  MemPool<MyStruct> struct_pool(50);
+int main(int, char **) {
+  //using namespace Common;
+
+  Common::MemPool<double> prim_pool(50);
+  Common::MemPool<MyStruct> struct_pool(50);
 
   for(auto i = 0; i < 50; ++i) {
     auto p_ret = prim_pool.allocate(i);
@@ -25,6 +34,8 @@ int main(int, char **) {
       struct_pool.deallocate(s_ret);
     }
   }
+
+  std::cout << "struct_pool.isFreeAtIndex(60):" << checkIfFree(struct_pool, 60) << std::endl;
 
   return 0;
 }
