@@ -8,8 +8,8 @@ struct MyStruct {
 using namespace Common;
 
 auto consumeFunction(LFQueue<MyStruct>* lfq) {
-  using namespace std::literals::chrono_literals;
-  std::this_thread::sleep_for(5s);
+  //using namespace std::literals::chrono_literals;
+  std::this_thread::sleep_for(std::chrono::seconds(5));
 
   while(lfq->size()) {
     const auto d = lfq->getNextToRead();
@@ -17,7 +17,7 @@ auto consumeFunction(LFQueue<MyStruct>* lfq) {
 
     std::cout << "consumeFunction read elem:" << d->d_[0] << "," << d->d_[1] << "," << d->d_[2] << " lfq-size:" << lfq->size() << std::endl;
 
-    std::this_thread::sleep_for(1s);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
   }
 
   std::cout << "consumeFunction exiting." << std::endl;
