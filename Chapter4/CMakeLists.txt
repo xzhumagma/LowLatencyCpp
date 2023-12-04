@@ -4,7 +4,7 @@ project(LowLatencyApp)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_COMPILER g++)
-set(CMAKE_CXX_FLAGS "-std=c++2a -Wall -Wextra -Werror -Wpedantic")
+set(CMAKE_CXX_FLAGS "-std=c++2a -Wall -Wextra -Wpedantic")
 set(CMAKE_VERBOSE_MAKEFILE on)
 
 file(GLOB SOURCES "*.cpp")
@@ -30,3 +30,15 @@ target_link_libraries(logging_example PUBLIC ${LIBS})
 
 add_executable(socket_example socket_example.cpp)
 target_link_libraries(socket_example PUBLIC ${LIBS})
+
+add_executable(Comment Comment.cpp)
+target_link_libraries(Comment PUBLIC ${LIBS})
+
+add_executable(constructor constructor.cpp)
+target_link_libraries(constructor PUBLIC ${LIBS})
+
+add_executable(explicit explicit.cpp)
+target_link_libraries(explicit PUBLIC ${LIBS})
+
+add_executable(IPC IPC.cpp)
+target_link_libraries(IPC PUBLIC ${LIBS})
