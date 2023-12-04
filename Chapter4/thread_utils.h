@@ -54,6 +54,6 @@ namespace Common
 
     std::this_thread::sleep_for(std::chrono::seconds(1)); // set the thread to sleep for 1 second.
 
-    return std::make_unique<std::thread>(std::move(t)); // returns a unique pointer to it.
+    return new std::thread(std::move(t)); // returns a unique pointer to it.
   }
 }
