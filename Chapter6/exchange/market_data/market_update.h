@@ -3,8 +3,9 @@
 #include <sstream>
 
 #include "common/types.h"
+#include "common/lf_queue.h"
 
-using namespace Common;
+//using namespace Common;
 
 namespace Exchange {
 #pragma pack(push, 1)
@@ -35,24 +36,24 @@ namespace Exchange {
   struct MEMarketUpdate {
     MarketUpdateType type_ = MarketUpdateType::INVALID;
 
-    OrderId order_id_ = OrderId_INVALID;
-    TickerId ticker_id_ = TickerId_INVALID;
-    Side side_ = Side::INVALID;
-    Price price_ = Price_INVALID;
-    Qty qty_ = Qty_INVALID;
-    Priority priority_ = Priority_INVALID;
+    Common::OrderId order_id_ = OrderId_INVALID;
+    Common::TickerId ticker_id_ = TickerId_INVALID;
+    Common::Side side_ = Common::Side::INVALID;
+    Common::Price price_ = Price_INVALID;
+    Common::Qty qty_ = Qty_INVALID;
+    Common::Priority priority_ = Priority_INVALID;
 
     auto toString() const {
       std::stringstream ss;
       ss << "MEMarketUpdate"
          << " ["
          << " type:" << marketUpdateTypeToString(type_)
-         << " ticker:" << tickerIdToString(ticker_id_)
-         << " oid:" << orderIdToString(order_id_)
+         << " ticker:" << Common::tickerIdToString(ticker_id_)
+         << " oid:" << Common::orderIdToString(order_id_)
          << " side:" << sideToString(side_)
-         << " qty:" << qtyToString(qty_)
-         << " price:" << priceToString(price_)
-         << " priority:" << priorityToString(priority_)
+         << " qty:" << Common::qtyToString(qty_)
+         << " price:" << Common::priceToString(price_)
+         << " priority:" << Common::priorityToString(priority_)
          << "]";
       return ss.str();
     }
@@ -60,5 +61,5 @@ namespace Exchange {
 
 #pragma pack(pop)
 
-  typedef Common::LFQueue<Exchange::MEMarketUpdate> MEMarketUpdateLFQueue;
+typedef Common::LFQueue<Exchange::MEMarketUpdate> MEMarketUpdateLFQueue;
 }
