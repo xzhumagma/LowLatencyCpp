@@ -80,14 +80,18 @@ namespace Exchange {
 
   auto MEOrderBook::add(ClientId client_id, OrderId client_order_id, TickerId ticker_id, Side side, Price price, Qty qty) noexcept -> void {
     const auto new_market_order_id = generateNewMarketOrderId();
+    // update the client_response_ data member with the attributes from this request and calls the MatchingEngine::sendClientResponse() method
+    // to publish that response back to the matching engine.
     client_response_ = {ClientResponseType::ACCEPTED, client_id, ticker_id, client_order_id, new_market_order_id, side, price, 0, qty};
     matching_engine_->sendClientResponse(&client_response_);
-
+    // Next, it calls the MEOrderBook::checkForMatch() method, which cheacks the current state of the order book against the new client
+    // request that just came in. It checks whether a partial or complete match can be made.
+    // the checkForMatch() method returns the number of shares that are left to be filled in the client request.
     const auto leaves_qty = checkForMatch(client_id, client_order_id, ticker_id, side, price, qty, new_market_order_id);
-
+    // if there is leaves_qty left to be filled, it means that the order was not completely filled and needs to be added to the order book.
     if (LIKELY(leaves_qty)) {
       const auto priority = getNextPriority(price);
-
+      // allocate the memory for the order_pool.
       auto order = order_pool_.allocate(ticker_id, client_id, client_order_id, new_market_order_id, side, price, leaves_qty, priority, nullptr,
                                         nullptr);
       addOrder(order);
