@@ -28,6 +28,8 @@ namespace Exchange {
 
   auto MatchingEngine::start() -> void {
     run_ = true;
+    // If the function template is designed to accept a variable number of arguments, it's fine to call it with 
+    // fewer arugments than the maximum allowed.
     ASSERT(Common::createAndStartThread(-1, "Exchange/MatchingEngine", [this]() { run(); }) != nullptr, "Failed to start MatchingEngine thread.");
   }
 

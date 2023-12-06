@@ -59,12 +59,21 @@ namespace Exchange {
     }
 
     auto run() noexcept {
+      // __FILE__ is a macro that expands to the name of the current file as a string literal.
+      // __LINE__ is a macro that expands to the current line number in the source file as a decimal constant.
+      // __FUNCTION__ is a macro that expands to the name of the current function as a string literal.
+      // this function is to log the file name, line number, function name and current time.
       logger_.log("%:% %() %\n", __FILE__, __LINE__, __FUNCTION__, Common::getCurrentTimeStr(&time_str_));
+      // If the MatchingEngine is not running, the thread will exit.
       while (run_) {
+        // the next to read in the queue of incoming_requests.
         const auto me_client_request = incoming_requests_->getNextToRead();
+        // If me_client_request is not a nullptr, then process the client request.
         if (LIKELY(me_client_request)) {
+          // log the client requesnt to the file.
           logger_.log("%:% %() % Processing %\n", __FILE__, __LINE__, __FUNCTION__, Common::getCurrentTimeStr(&time_str_),
                       me_client_request->toString());
+          // process the client request.
           processClientRequest(me_client_request);
           incoming_requests_->updateReadIndex();
         }
@@ -76,11 +85,11 @@ namespace Exchange {
 
     MatchingEngine(const MatchingEngine &) = delete;
 
-    MatchingEngine(const MatchingEngine &&) = delete;
+    MatchingEngine(MatchingEngine &&) = delete;
 
     MatchingEngine &operator=(const MatchingEngine &) = delete;
 
-    MatchingEngine &operator=(const MatchingEngine &&) = delete;
+    MatchingEngine &operator=(MatchingEngine &&) = delete;
 
   private:
     OrderBookHashMap ticker_order_book_;
@@ -88,7 +97,8 @@ namespace Exchange {
     ClientRequestLFQueue *incoming_requests_ = nullptr;
     ClientResponseLFQueue *outgoing_ogw_responses_ = nullptr;
     MEMarketUpdateLFQueue *outgoing_md_updates_ = nullptr;
-
+    // The primary purpose of marking a variable as 'volatile' is to prevent the compiler from applying any optimizations on it that based 
+    // on the assumption that the variable can not by changed by external factors.
     volatile bool run_ = false;
 
     std::string time_str_;
