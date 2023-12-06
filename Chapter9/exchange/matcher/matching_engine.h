@@ -76,11 +76,11 @@ namespace Exchange {
 
     MatchingEngine(const MatchingEngine &) = delete;
 
-    MatchingEngine(const MatchingEngine &&) = delete;
+    MatchingEngine(MatchingEngine &&) = delete;
 
     MatchingEngine &operator=(const MatchingEngine &) = delete;
 
-    MatchingEngine &operator=(const MatchingEngine &&) = delete;
+    MatchingEngine &operator=( MatchingEngine &&) = delete;
 
   private:
     OrderBookHashMap ticker_order_book_;

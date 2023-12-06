@@ -30,11 +30,11 @@ namespace Exchange {
 
     MEOrderBook(const MEOrderBook &) = delete;
 
-    MEOrderBook(const MEOrderBook &&) = delete;
+    MEOrderBook( MEOrderBook &&) = delete;
 
     MEOrderBook &operator=(const MEOrderBook &) = delete;
 
-    MEOrderBook &operator=(const MEOrderBook &&) = delete;
+    MEOrderBook &operator=( MEOrderBook &&) = delete;
 
   private:
     TickerId ticker_id_ = TickerId_INVALID;
@@ -76,10 +76,12 @@ namespace Exchange {
       price_orders_at_price_.at(priceToIndex(new_orders_at_price->price_)) = new_orders_at_price;
 
       const auto best_orders_by_price = (new_orders_at_price->side_ == Side::BUY ? bids_by_price_ : asks_by_price_);
+      // edge case that the side of the book is empty.
       if (UNLIKELY(!best_orders_by_price)) {
         (new_orders_at_price->side_ == Side::BUY ? bids_by_price_ : asks_by_price_) = new_orders_at_price;
         new_orders_at_price->prev_entry_ = new_orders_at_price->next_entry_ = new_orders_at_price;
       } else {
+        // find the correct entry in the doubly linked list of price levels. 
         auto target = best_orders_by_price;
         bool add_after = ((new_orders_at_price->side_ == Side::SELL && new_orders_at_price->price_ > target->price_) ||
                           (new_orders_at_price->side_ == Side::BUY && new_orders_at_price->price_ < target->price_));
@@ -184,6 +186,7 @@ namespace Exchange {
         auto new_orders_at_price = orders_at_price_pool_.allocate(order->side_, order->price_, order, nullptr, nullptr);
         addOrdersAtPrice(new_orders_at_price);
       } else {
+        // update the prev_order_ and next_order_ pointers on *order being added as well as the last element on the list
         auto first_order = (orders_at_price ? orders_at_price->first_me_order_ : nullptr);
 
         first_order->prev_order_->next_order_ = order;
