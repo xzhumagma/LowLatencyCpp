@@ -1,0 +1,26 @@
+<map id="Exchange::MEOrderBook" name="Exchange::MEOrderBook">
+<area shape="rect" id="Node000001" title=" " alt="" coords="693,1277,912,1803"/>
+<area shape="rect" id="Node000002" href="$classExchange_1_1MatchingEngine.html" title=" " alt="" coords="135,855,324,1200"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,1200,221,1227,233,1252,274,1307,324,1354,380,1395,441,1429,503,1458,564,1481,678,1513,677,1518,563,1486,501,1462,438,1434,377,1399,321,1358,270,1310,228,1255,216,1229,208,1201"/>
+<area shape="rect" id="Node000003" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="5,408,181,733"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,733,88,783,99,830,111,863,128,895,123,897,107,865,93,831,83,783,78,734"/>
+<area shape="rect" id="Node000004" href="$classCommon_1_1Logger.html" title=" " alt="" coords="277,408,403,733"/>
+<area shape="poly" id="edge13_Node000001_Node000004" title=" " alt="" coords="358,733,360,757,362,826,359,885,349,987,347,1035,352,1084,366,1138,393,1199,419,1243,451,1284,486,1323,524,1359,604,1422,681,1472,678,1476,601,1426,521,1363,482,1327,447,1288,415,1246,388,1201,361,1140,347,1085,342,1035,343,987,354,885,357,826,355,757,353,734"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="303,734,278,839,272,838,298,733"/>
+<area shape="rect" id="Node000005" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="234,5,446,345"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="343,345,343,391,337,391,337,345"/>
+<area shape="rect" id="Node000006" href="$classCommon_1_1MemPool.html" title=" " alt="" coords="461,897,681,1157"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="612,1157,648,1252,688,1336,683,1338,643,1254,607,1159"/>
+<area shape="rect" id="Node000007" href="$structExchange_1_1MEOrdersAtPrice.html" title=" " alt="" coords="705,965,900,1090"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="805,1090,805,1261,800,1261,800,1090"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="902,990,920,1003,927,1027,924,1043,916,1055,912,1053,919,1042,921,1027,915,1006,899,994"/>
+<area shape="rect" id="Node000008" href="$structExchange_1_1MEOrder.html" title=" " alt="" coords="732,448,873,693"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="805,694,805,948,800,948,800,694"/>
+<area shape="poly" id="edge8_Node000008_Node000008" title=" " alt="" coords="875,534,893,546,900,571,897,587,890,598,885,596,892,585,895,571,889,549,872,538"/>
+<area shape="rect" id="Node000009" href="$classCommon_1_1MemPool.html" title=" " alt="" coords="1042,897,1262,1157"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1066,1159,924,1367,919,1364,1062,1156"/>
+<area shape="rect" id="Node000010" href="$structExchange_1_1MEClientResponse.html" title=" " alt="" coords="1286,915,1493,1140"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="1325,1142,1277,1202,1192,1281,1101,1353,1010,1417,928,1469,925,1465,1007,1412,1098,1349,1189,1277,1273,1198,1321,1138"/>
+<area shape="rect" id="Node000011" href="$structExchange_1_1MEMarketUpdate.html" title=" " alt="" coords="1517,935,1715,1120"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1572,1122,1543,1164,1507,1202,1439,1257,1365,1307,1287,1352,1209,1392,1058,1458,929,1504,927,1499,1056,1453,1207,1387,1285,1347,1362,1302,1435,1253,1504,1198,1538,1161,1567,1119"/>
+</map>

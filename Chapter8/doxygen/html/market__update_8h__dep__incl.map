@@ -1,0 +1,65 @@
+<map id="exchange/market_data/market_update.h" name="exchange/market_data/market_update.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="750,5,921,45"/>
+<area shape="rect" id="Node000002" href="$snapshot__synthesizer_8h.html" title=" " alt="" coords="298,93,477,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="737,48,477,98,476,92,736,43"/>
+<area shape="rect" id="Node000007" href="$matching__engine_8h.html" title=" " alt="" coords="509,181,717,221"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="738,42,685,62,661,77,640,95,627,115,619,138,615,182,609,181,614,137,622,113,636,92,658,72,682,57,736,37"/>
+<area shape="rect" id="Node000010" href="$me__order__book_8h.html" title=" " alt="" coords="650,93,818,133"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="804,56,758,95,755,91,801,52"/>
+<area shape="rect" id="Node000011" href="$market__data__consumer_8h.html" title=" " alt="" coords="843,93,1033,133"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="870,52,917,91,914,95,867,56"/>
+<area shape="rect" id="Node000013" href="$market__order__book_8h.html" title=" " alt="" coords="1122,93,1298,133"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="931,46,1129,91,1127,96,930,51"/>
+<area shape="rect" id="Node000020" href="$trade__engine_8h.html" title=" " alt="" coords="1185,533,1349,573"/>
+<area shape="poly" id="edge38_Node000001_Node000020" title=" " alt="" coords="935,36,994,56,1023,72,1048,91,1070,116,1082,140,1086,167,1087,200,1087,378,1091,405,1101,430,1116,452,1135,473,1180,507,1224,531,1221,536,1177,511,1132,477,1112,456,1096,432,1086,407,1082,379,1082,200,1081,167,1076,142,1065,119,1044,95,1020,76,992,61,933,41"/>
+<area shape="rect" id="Node000003" href="$market__data__publisher_8h.html" title=" " alt="" coords="79,181,266,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,141,221,184,219,179,327,136"/>
+<area shape="rect" id="Node000006" href="$snapshot__synthesizer_8cpp.html" title=" " alt="" coords="291,181,484,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="390,147,390,181,385,181,385,147"/>
+<area shape="rect" id="Node000004" href="$exchange__main_8cpp.html" title=" " alt="" coords="231,277,450,302"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,225,320,274,317,279,221,230"/>
+<area shape="rect" id="Node000005" href="$market__data__publisher_8cpp.html" title=" " alt="" coords="5,269,207,309"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="152,234,123,271,119,267,147,231"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="541,228,378,279,376,274,539,223"/>
+<area shape="rect" id="Node000008" href="$matching__engine_8cpp.html" title=" " alt="" coords="474,269,682,309"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="602,235,588,270,583,268,597,233"/>
+<area shape="rect" id="Node000009" href="$me__order__book_8cpp.html" title=" " alt="" coords="706,269,874,309"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="665,225,752,267,750,272,663,230"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="698,143,641,183,638,179,695,139"/>
+<area shape="poly" id="edge12_Node000010_Node000009" title=" " alt="" coords="747,146,786,268,781,270,742,147"/>
+<area shape="rect" id="Node000012" href="$market__data__consumer_8cpp.html" title=" " alt="" coords="791,181,997,221"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="924,147,906,182,901,180,920,145"/>
+<area shape="rect" id="Node000014" href="$market__order__book_8cpp.html" title=" " alt="" coords="942,621,1118,661"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="1157,142,1117,167,1077,200,1061,220,1048,241,1040,264,1037,288,1037,467,1033,621,1028,621,1031,467,1031,288,1035,262,1043,238,1057,216,1074,197,1113,163,1154,137"/>
+<area shape="rect" id="Node000015" href="$position__keeper_8h.html" title=" " alt="" coords="1179,181,1361,221"/>
+<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="1233,143,1259,180,1255,183,1229,146"/>
+<area shape="poly" id="edge37_Node000013_Node000020" title=" " alt="" coords="1190,146,1170,182,1149,234,1145,257,1143,288,1143,379,1146,403,1153,426,1179,469,1211,504,1242,531,1239,535,1207,508,1174,472,1149,428,1141,404,1138,379,1138,288,1139,257,1144,232,1165,180,1185,143"/>
+<area shape="rect" id="Node000016" href="$risk__manager_8h.html" title=" " alt="" coords="1286,269,1441,309"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="1303,229,1344,267,1341,271,1299,233"/>
+<area shape="poly" id="edge36_Node000015_Node000020" title=" " alt="" coords="1272,235,1270,533,1265,533,1267,235"/>
+<area shape="rect" id="Node000017" href="$order__manager_8h.html" title=" " alt="" coords="1421,357,1585,397"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="1407,314,1474,355,1471,360,1404,319"/>
+<area shape="poly" id="edge35_Node000016_Node000020" title=" " alt="" coords="1347,322,1316,379,1287,446,1276,493,1271,533,1266,533,1271,492,1282,445,1311,376,1342,320"/>
+<area shape="rect" id="Node000025" href="$risk__manager_8cpp.html" title=" " alt="" coords="1789,445,1943,485"/>
+<area shape="poly" id="edge34_Node000016_Node000025" title=" " alt="" coords="1450,310,1599,355,1722,401,1824,443,1822,448,1720,406,1597,360,1448,315"/>
+<area shape="rect" id="Node000018" href="$liquidity__taker_8h.html" title=" " alt="" coords="1331,445,1513,485"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="1478,409,1442,447,1438,443,1474,406"/>
+<area shape="poly" id="edge33_Node000017_Node000020" title=" " alt="" coords="1409,401,1363,419,1321,447,1304,467,1291,490,1274,534,1269,532,1286,488,1299,464,1318,443,1360,415,1407,396"/>
+<area shape="rect" id="Node000022" href="$order__manager_8cpp.html" title=" " alt="" coords="1537,621,1701,661"/>
+<area shape="poly" id="edge31_Node000017_Node000022" title=" " alt="" coords="1596,398,1680,422,1711,433,1728,444,1740,468,1741,493,1733,519,1720,544,1683,589,1645,623,1642,619,1679,585,1716,541,1728,517,1735,493,1734,469,1724,447,1709,438,1678,427,1595,403"/>
+<area shape="rect" id="Node000024" href="$market__maker_8h.html" title=" " alt="" coords="1538,445,1714,485"/>
+<area shape="poly" id="edge28_Node000017_Node000024" title=" " alt="" coords="1543,403,1600,443,1597,447,1540,407"/>
+<area shape="poly" id="edge32_Node000017_Node000025" title=" " alt="" coords="1597,398,1789,443,1788,448,1596,403"/>
+<area shape="rect" id="Node000019" href="$liquidity__taker_8cpp.html" title=" " alt="" coords="1331,621,1513,661"/>
+<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="1425,499,1425,621,1419,621,1419,499"/>
+<area shape="poly" id="edge22_Node000018_Node000020" title=" " alt="" coords="1377,494,1302,536,1300,531,1375,490"/>
+<area shape="poly" id="edge25_Node000020_Node000014" title=" " alt="" coords="1203,581,1083,624,1081,619,1201,576"/>
+<area shape="poly" id="edge23_Node000020_Node000019" title=" " alt="" coords="1315,578,1389,619,1387,624,1312,582"/>
+<area shape="rect" id="Node000021" href="$market__maker_8cpp.html" title=" " alt="" coords="1726,621,1902,661"/>
+<area shape="poly" id="edge24_Node000020_Node000021" title=" " alt="" coords="1363,565,1714,619,1726,621,1725,626,1714,624,1363,571"/>
+<area shape="poly" id="edge26_Node000020_Node000022" title=" " alt="" coords="1358,574,1543,619,1542,624,1357,579"/>
+<area shape="rect" id="Node000023" href="$trade__engine_8cpp.html" title=" " alt="" coords="1143,621,1307,661"/>
+<area shape="poly" id="edge27_Node000020_Node000023" title=" " alt="" coords="1254,587,1236,622,1232,620,1249,585"/>
+<area shape="poly" id="edge30_Node000024_Node000020" title=" " alt="" coords="1535,491,1346,536,1345,531,1533,486"/>
+<area shape="poly" id="edge29_Node000024_Node000021" title=" " alt="" coords="1658,493,1795,619,1792,623,1655,497"/>
+</map>

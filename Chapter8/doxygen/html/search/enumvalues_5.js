@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['integer_0',['INTEGER',['../namespaceCommon.html#a05bc66d4e6fe8d9499b674ad1ae3846ba5d5cd46919fa987731fb2edefe0f2a0c',1,'Common']]],
+  ['invalid_1',['invalid',['../namespaceCommon.html#adbaad50fa824fd1168bbb8d5c0842ddeaccc0377a8afbf50e7094f5c23a8af223',1,'Common::INVALID'],['../namespaceCommon.html#ab6b3c3e973d3482a1877428eb6451a7baccc0377a8afbf50e7094f5c23a8af223',1,'Common::INVALID'],['../namespaceExchange.html#a94da842144ba15590e420f32bdfd3f9baccc0377a8afbf50e7094f5c23a8af223',1,'Exchange::INVALID'],['../namespaceExchange.html#a2573cb45be152f36bcb2bc9d421cdbd0accc0377a8afbf50e7094f5c23a8af223',1,'Exchange::INVALID'],['../namespaceExchange.html#ae6fc29ec388207ff02502343ae88e80caccc0377a8afbf50e7094f5c23a8af223',1,'Exchange::INVALID'],['../namespaceTrading.html#a462680fd21cd0fd9e55c4d2df8975620accc0377a8afbf50e7094f5c23a8af223',1,'Trading::INVALID'],['../namespaceTrading.html#a30aa165178a5a8a931f0c587e35b583aaccc0377a8afbf50e7094f5c23a8af223',1,'Trading::INVALID']]]
+];

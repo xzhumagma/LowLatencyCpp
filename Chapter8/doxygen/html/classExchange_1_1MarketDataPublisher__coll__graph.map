@@ -1,0 +1,21 @@
+<map id="Exchange::MarketDataPublisher" name="Exchange::MarketDataPublisher">
+<area shape="rect" id="Node000001" title=" " alt="" coords="241,1627,463,1912"/>
+<area shape="rect" id="Node000002" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="5,1219,181,1544"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,1544,85,1574,97,1601,122,1637,154,1669,190,1695,228,1717,225,1722,187,1700,151,1673,118,1641,92,1604,80,1575,73,1545"/>
+<area shape="rect" id="Node000003" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="312,796,528,1136"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="377,1137,367,1199,356,1305,350,1413,349,1610,344,1610,345,1413,351,1305,361,1198,372,1136"/>
+<area shape="rect" id="Node000007" href="$classExchange_1_1SnapshotSynthesizer.html" title=" " alt="" coords="539,1199,760,1564"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="381,1135,388,1155,399,1173,412,1185,425,1190,454,1189,486,1186,504,1188,521,1196,527,1200,524,1204,519,1201,502,1193,486,1191,455,1194,424,1195,409,1189,395,1176,383,1157,376,1137"/>
+<area shape="rect" id="Node000004" href="$classCommon_1_1Logger.html" title=" " alt="" coords="515,408,640,733"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="516,604,460,636,400,679,345,733,321,764,302,797,281,847,264,899,241,1007,232,1117,234,1227,244,1334,260,1436,280,1528,302,1610,297,1611,275,1530,255,1437,238,1335,228,1227,227,1117,236,1006,259,898,276,845,298,795,317,761,341,730,397,675,457,632,513,599"/>
+<area shape="rect" id="Node000006" href="$structCommon_1_1McastSocket.html" title=" " alt="" coords="903,823,1089,1109"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="642,604,699,639,765,684,832,736,894,794,907,809,903,812,890,798,829,740,762,688,696,644,639,609"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="574,734,576,927,581,1032,592,1136,599,1182,594,1183,587,1136,576,1032,570,927,569,734"/>
+<area shape="rect" id="Node000005" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="471,5,683,345"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="580,345,580,391,575,391,575,345"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="993,1109,980,1175,944,1296,909,1390,886,1432,858,1474,821,1518,774,1566,705,1621,629,1667,552,1704,479,1733,477,1728,550,1700,627,1663,702,1617,770,1562,817,1514,853,1471,882,1429,904,1388,939,1295,975,1174,988,1108"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="918,1111,894,1138,874,1151,854,1162,773,1237,770,1233,850,1158,871,1146,890,1134,914,1107"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="541,1541,522,1566,475,1625,471,1622,518,1562,536,1538"/>
+<area shape="rect" id="Node000008" href="$classCommon_1_1MemPool.html" title=" " alt="" coords="659,836,879,1096"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="734,1097,709,1184,704,1182,729,1095"/>
+</map>

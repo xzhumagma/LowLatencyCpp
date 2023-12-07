@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['accepted_0',['ACCEPTED',['../namespaceExchange.html#ae6fc29ec388207ff02502343ae88e80caa806f1d2c42338ef5fa6497b66153e79',1,'Exchange']]],
+  ['add_1',['add',['../namespaceExchange.html#a94da842144ba15590e420f32bdfd3f9ba9eeb52badb613229884838847294b90d',1,'Exchange::ADD'],['../classExchange_1_1MEOrderBook.html#ac74b0b27d4ed95740a5a9181a38eda34',1,'Exchange::MEOrderBook::add()']]],
+  ['addclientrequest_2',['addClientRequest',['../classExchange_1_1FIFOSequencer.html#a86223652b8b48d9451d177c02d8b0a2c',1,'Exchange::FIFOSequencer']]],
+  ['addfill_3',['addfill',['../classTrading_1_1PositionKeeper.html#afea7c6771df002aba2f3b9d572011cc5',1,'Trading::PositionKeeper::addFill()'],['../structTrading_1_1PositionInfo.html#af89c51d56d354d4e7f1bbde5b3db7304',1,'Trading::PositionInfo::addFill()']]],
+  ['addorder_4',['addorder',['../classExchange_1_1MEOrderBook.html#ac6024a7556a32d67b28e633be9d78025',1,'Exchange::MEOrderBook::addOrder()'],['../classTrading_1_1MarketOrderBook.html#a114e216b726ab945ae18aa1bd28bd418',1,'Trading::MarketOrderBook::addOrder()']]],
+  ['addordersatprice_5',['addordersatprice',['../classExchange_1_1MEOrderBook.html#a352c75ce196536234c2e5498197ea1a0',1,'Exchange::MEOrderBook::addOrdersAtPrice()'],['../classTrading_1_1MarketOrderBook.html#a3af42727dd9e4c612167e8f0641730a1',1,'Trading::MarketOrderBook::addOrdersAtPrice()']]],
+  ['addtoepolllist_6',['addToEpollList',['../structCommon_1_1TCPServer.html#aea85000c3da84144810da69e682539d2',1,'Common::TCPServer']]],
+  ['addtosnapshot_7',['addToSnapshot',['../classExchange_1_1SnapshotSynthesizer.html#a1ce2bcab37db3640f59f9d5b660cb6a1',1,'Exchange::SnapshotSynthesizer']]],
+  ['agg_5ftrade_5fqty_5fratio_5f_8',['agg_trade_qty_ratio_',['../classTrading_1_1FeatureEngine.html#aac7f51fdf60d7f627396d6c383c97789',1,'Trading::FeatureEngine']]],
+  ['algoonorderbookupdate_5f_9',['algoOnOrderBookUpdate_',['../classTrading_1_1TradeEngine.html#a4b50d8c26fe4a98fcdb4f75d39b49a0a',1,'Trading::TradeEngine']]],
+  ['algoonorderupdate_5f_10',['algoOnOrderUpdate_',['../classTrading_1_1TradeEngine.html#a08a1cc466b317db0a310ce0b9e9a4fc2',1,'Trading::TradeEngine']]],
+  ['algoontradeupdate_5f_11',['algoOnTradeUpdate_',['../classTrading_1_1TradeEngine.html#a033973d38e9732b839e49c17f46b7f16',1,'Trading::TradeEngine']]],
+  ['algotype_12',['AlgoType',['../namespaceCommon.html#ab6b3c3e973d3482a1877428eb6451a7b',1,'Common']]],
+  ['algotypetostring_13',['algoTypeToString',['../namespaceCommon.html#a33b169369d7a45542a6ec40d80d1d908',1,'Common']]],
+  ['allocate_14',['allocate',['../classCommon_1_1MemPool.html#aac060b3f842bcb1503df5f6152cf6c5c',1,'Common::MemPool']]],
+  ['allowed_15',['ALLOWED',['../namespaceTrading.html#a30aa165178a5a8a931f0c587e35b583aa9725825c796122ef40f01b2d8794f902',1,'Trading']]],
+  ['architecture_5fid_16',['architecture_id',['../cmake-build-debug_2CMakeFiles_23_822_81_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../cmake-build-debug_2CMakeFiles_23_822_81_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2CMakeFiles_23_822_81_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../cmake-build-release_2CMakeFiles_23_822_81_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]],
+  ['ask_5fprice_5f_17',['ask_price_',['../structTrading_1_1BBO.html#a88380b2fdf9ae5497add4e8ba75a61d5',1,'Trading::BBO']]],
+  ['ask_5fqty_5f_18',['ask_qty_',['../structTrading_1_1BBO.html#ac5b4e9969bf03bcc168efb13443099c0',1,'Trading::BBO']]],
+  ['asks_5fby_5fprice_5f_19',['asks_by_price_',['../classTrading_1_1MarketOrderBook.html#a55adecf71a9a22e77cb60ee5283a5bcf',1,'Trading::MarketOrderBook::asks_by_price_'],['../classExchange_1_1MEOrderBook.html#a56f695320f14deb36818143bcdc36a26',1,'Exchange::MEOrderBook::asks_by_price_']]],
+  ['assert_20',['ASSERT',['../macros_8h.html#a1f0d29ce213048f28c4a8634d14bbcbd',1,'macros.h']]]
+];

@@ -1,0 +1,9 @@
+<map id="Trading::RiskInfo" name="Trading::RiskInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="95,461,257,547"/>
+<area shape="rect" id="Node000002" href="$structTrading_1_1PositionInfo.html" title=" " alt="" coords="5,193,152,399"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,398,96,436,103,448,99,450,91,439,77,400"/>
+<area shape="rect" id="Node000003" href="$structTrading_1_1BBO.html" title=" " alt="" coords="30,5,127,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,131,81,177,76,177,76,131"/>
+<area shape="rect" id="Node000004" href="$structCommon_1_1RiskCfg.html" title=" " alt="" coords="176,243,315,349"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,350,208,438,204,447,199,445,203,436,230,348"/>
+</map>

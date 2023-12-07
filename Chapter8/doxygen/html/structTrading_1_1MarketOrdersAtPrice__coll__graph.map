@@ -1,0 +1,7 @@
+<map id="Trading::MarketOrdersAtPrice" name="Trading::MarketOrdersAtPrice">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,253,208,379"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="209,298,227,304,235,316,226,328,222,325,229,316,224,308,208,303"/>
+<area shape="rect" id="Node000002" href="$structTrading_1_1MarketOrder.html" title=" " alt="" coords="31,5,182,191"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,191,109,237,104,237,104,191"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="183,74,201,82,209,98,206,108,199,116,195,112,201,106,203,98,197,86,181,79"/>
+</map>

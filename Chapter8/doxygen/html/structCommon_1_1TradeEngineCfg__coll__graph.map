@@ -1,0 +1,5 @@
+<map id="Common::TradeEngineCfg" name="Common::TradeEngineCfg">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,173,188,259"/>
+<area shape="rect" id="Node000002" href="$structCommon_1_1RiskCfg.html" title=" " alt="" coords="27,5,166,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,111,99,157,94,157,94,111"/>
+</map>

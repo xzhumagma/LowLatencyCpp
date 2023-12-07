@@ -1,0 +1,14 @@
+<map id="Exchange::SnapshotSynthesizer" name="Exchange::SnapshotSynthesizer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="240,1199,461,1564"/>
+<area shape="rect" id="Node000002" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="5,796,221,1136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,1136,117,1174,138,1211,165,1245,196,1275,228,1303,225,1307,192,1279,161,1248,134,1214,112,1176,100,1137"/>
+<area shape="rect" id="Node000003" href="$classCommon_1_1Logger.html" title=" " alt="" coords="255,408,380,733"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="314,734,312,796,306,966,306,1041,312,1136,317,1182,312,1183,307,1136,301,1041,301,966,307,796,308,733"/>
+<area shape="rect" id="Node000005" href="$structCommon_1_1McastSocket.html" title=" " alt="" coords="378,823,563,1109"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="383,732,412,807,407,809,378,734"/>
+<area shape="rect" id="Node000004" href="$classCommon_1_1LFQueue.html" title=" " alt="" coords="211,5,423,345"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="320,345,320,391,315,391,315,345"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="432,1110,410,1184,405,1182,427,1108"/>
+<area shape="rect" id="Node000006" href="$classCommon_1_1MemPool.html" title=" " alt="" coords="587,836,807,1096"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="608,1098,578,1138,475,1258,471,1255,574,1134,604,1094"/>
+</map>
