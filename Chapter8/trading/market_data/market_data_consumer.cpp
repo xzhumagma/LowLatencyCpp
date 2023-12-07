@@ -179,6 +179,9 @@ namespace Trading {
     if (socket->next_rcv_valid_index_ >= sizeof(Exchange::MDPMarketUpdate)) {
       size_t i = 0;
       for (; i + sizeof(Exchange::MDPMarketUpdate) <= socket->next_rcv_valid_index_; i += sizeof(Exchange::MDPMarketUpdate)) {
+        // vector.data()is a member function that returns the direct pointer to the memory arrray used internally by the vector 
+        // to store its owned elements.
+        // the read it in chunks of sizeof(Exchange::MDPMarketUpdate) bytes. 
         auto request = reinterpret_cast<const Exchange::MDPMarketUpdate *>(socket->inbound_data_.data() + i);
         logger_.log("%:% %() % Received % socket len:% %\n", __FILE__, __LINE__, __FUNCTION__,
                     Common::getCurrentTimeStr(&time_str_),
@@ -186,7 +189,7 @@ namespace Trading {
         // whether if there is a sequence number gap or whether we are already in recovery. 
         const bool already_in_recovery = in_recovery_;
         in_recovery_ = (already_in_recovery || request->seq_num_ != next_exp_inc_seq_num_);
-        
+        // in_recovery is a rare case: the case that we need to handle it.
         if (UNLIKELY(in_recovery_)) {
           if (UNLIKELY(!already_in_recovery)) { // if we just entered recovery, start the snapshot synchonization process by subscribing to the snapshot multicast stream.
             logger_.log("%:% %() % Packet drops on % socket. SeqNum expected:% received:%\n", __FILE__, __LINE__, __FUNCTION__,
