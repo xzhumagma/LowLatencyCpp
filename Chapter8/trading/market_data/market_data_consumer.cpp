@@ -173,7 +173,9 @@ namespace Trading {
 
       return;
     }
-
+    // go through the socket->rcv_buffer_buffer and read it in chunks of sizeof(Exchange::MDPMarketUpdate) bytes.
+    // the goal here is to read as many full MDP market data update messages as possible from the socket->rcv_buffer_buffer.
+    // convert thedata in the buffer to an object of the Exchange::MDPMarketUpdate type. 
     if (socket->next_rcv_valid_index_ >= sizeof(Exchange::MDPMarketUpdate)) {
       size_t i = 0;
       for (; i + sizeof(Exchange::MDPMarketUpdate) <= socket->next_rcv_valid_index_; i += sizeof(Exchange::MDPMarketUpdate)) {
@@ -181,10 +183,10 @@ namespace Trading {
         logger_.log("%:% %() % Received % socket len:% %\n", __FILE__, __LINE__, __FUNCTION__,
                     Common::getCurrentTimeStr(&time_str_),
                     (is_snapshot ? "snapshot" : "incremental"), sizeof(Exchange::MDPMarketUpdate), request->toString());
-
+        // whether if there is a sequence number gap or whether we are already in recovery. 
         const bool already_in_recovery = in_recovery_;
         in_recovery_ = (already_in_recovery || request->seq_num_ != next_exp_inc_seq_num_);
-
+        
         if (UNLIKELY(in_recovery_)) {
           if (UNLIKELY(!already_in_recovery)) { // if we just entered recovery, start the snapshot synchonization process by subscribing to the snapshot multicast stream.
             logger_.log("%:% %() % Packet drops on % socket. SeqNum expected:% received:%\n", __FILE__, __LINE__, __FUNCTION__,
