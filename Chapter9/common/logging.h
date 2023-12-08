@@ -87,6 +87,7 @@ namespace Common {
         : file_name_(file_name), queue_(LOG_QUEUE_SIZE) {
       file_.open(file_name);
       ASSERT(file_.is_open(), "Could not open log file:" + file_name);
+      // since the flushQueue() does not require additional arguments, there is no need to pass any extra arguments in the 'args' parameter.
       logger_thread_ = createAndStartThread(-1, "Common/Logger " + file_name_, [this]() { flushQueue(); });
       ASSERT(logger_thread_ != nullptr, "Failed to start Logger thread.");
     }
