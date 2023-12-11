@@ -19,7 +19,7 @@ namespace Trading {
 
     ASSERT(incremental_mcast_socket_.join(incremental_ip),
            "Join failed on:" + std::to_string(incremental_mcast_socket_.socket_fd_) + " error:" + std::string(std::strerror(errno)));
-
+    // the snapshot_mcast_socket will be initiated on demand as packet drops or sequence gap are detected.
     snapshot_mcast_socket_.recv_callback_ = recv_callback;
   }
 
@@ -34,9 +34,10 @@ namespace Trading {
 
   /// Start the process of snapshot synchronization by subscribing to the snapshot multicast stream.
   auto MarketDataConsumer::startSnapshotSync() -> void {
+    // clear the queued messages, which we use to queue upmarket update messages from the snapshot and incremental streams. 
     snapshot_queued_msgs_.clear();
     incremental_queued_msgs_.clear();
-
+    // create socket for teh snapshot_ip_ and snapshot_port_ address.
     ASSERT(snapshot_mcast_socket_.init(snapshot_ip_, iface_, snapshot_port_, /*is_listening*/ true) >= 0,
            "Unable to create snapshot mcast socket. error:" + std::string(std::strerror(errno)));
     ASSERT(snapshot_mcast_socket_.join(snapshot_ip_), // IGMP multicast subscription.
@@ -209,6 +210,8 @@ namespace Trading {
           incoming_md_updates_->updateWriteIndex();
         }
       }
+      // void * memcpy(void* destination, const void* source, size_t num);
+      // After processing the received data, it shifts any remaining data in the receive buffter to the beginning of the buffer.
       memcpy(socket->inbound_data_.data(), socket->inbound_data_.data() + i, socket->next_rcv_valid_index_ - i);
       socket->next_rcv_valid_index_ -= i;
     }

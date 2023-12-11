@@ -42,6 +42,8 @@ namespace Common {
     size_t next_rcv_valid_index_ = 0;
 
     /// Function wrapper for the method to call when data is read.
+    // void (McastSocket *s) is the type of the callable object that std:function can hold
+    // In that case, it's a fucntion type that takes a single argument of type McastSocket* and returns void.
     std::function<void(McastSocket *s)> recv_callback_ = nullptr;
 
     std::string time_str_;
