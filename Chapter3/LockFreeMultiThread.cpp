@@ -28,19 +28,19 @@ int main(){
     auto start  = std::chrono::high_resolution_clock::now();
     BankAccount account;
     std::thread depositThread1([&]{
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 1000000; i++)
         {
             account.deposit(2.0);
         }
     });
     std::thread withdrawThread1([&]{
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 500000; i++)
         {
             account.withdraw(1.0);
         }
     });
     std::thread withdrawThread2([&]{
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 500000; i++)
         {
             account.withdraw(1.0);
         }

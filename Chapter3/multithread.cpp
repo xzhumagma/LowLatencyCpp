@@ -17,7 +17,7 @@ class BankAccount
          // Lock the mutex to ensure exclusive access to the balance
          std::lock_guard<std::mutex> lock(mtx);
          // Simulate some processing time
-         std::this_thread::sleep_for(std::chrono::milliseconds(1));
+         //std::this_thread::sleep_for(std::chrono::milliseconds(1));
          balance += amount;
        }
 
@@ -25,7 +25,7 @@ class BankAccount
        {
         // lock the mutex to ensure exclusive access to the balance
         std::lock_guard<std::mutex> lock(mtx);
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+       // std::this_thread::sleep_for(std::chrono::milliseconds(1));
         if (amount <= balance)
         {
             balance -= amount;
@@ -49,21 +49,21 @@ int main()
     BankAccount account;
     // create multiple threads to deposit and withdraw money.
     std::thread depositThread1([&]{
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 1000000; i++)
         {
             account.deposit(2.0);
         }
     });
 
     std::thread withdrawThread1([&]{
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 500000; i++)
         {
             account.withdraw(1.0);
         }
     });
 
     std::thread withdrawThread2([&]{
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 500000; i++)
         {
             account.withdraw(1.0);
         }
