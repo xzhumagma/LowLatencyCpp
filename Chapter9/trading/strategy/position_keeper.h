@@ -12,10 +12,12 @@ using namespace Common;
 
 namespace Trading {
   struct PositionInfo {
+    // current position. This can be positive, negative or zero.
     int32_t position_ = 0;
+    // realized pnl, unrealized or open PnL and the total PnL (the sum of the two values.)
     double real_pnl_ = 0, unreal_pnl_ = 0, total_pnl_ = 0;
     std::array<double, sideToIndex(Side::MAX) + 1> open_vwap_;
-    Qty volume_ = 0;
+    Qty volume_ = 0;// total volume traded.
     const BBO *bbo_ = nullptr;
 
     auto toString() const {

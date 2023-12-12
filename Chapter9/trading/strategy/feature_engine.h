@@ -1,11 +1,15 @@
 #pragma once
-
+// make sure headers are included only once.
 #include "common/macros.h"
 #include "common/logging.h"
+#include "market_order_book.h"
+#include "market_order.h"
+
 
 using namespace Common;
 
 namespace Trading {
+  // this is a constant that could be known at compile time.
   constexpr auto Feature_INVALID = std::numeric_limits<double>::quiet_NaN();
 
   class FeatureEngine {
@@ -49,11 +53,11 @@ namespace Trading {
 
     FeatureEngine(const FeatureEngine &) = delete;
 
-    FeatureEngine(const FeatureEngine &&) = delete;
+    FeatureEngine(FeatureEngine &&) = delete;
 
     FeatureEngine &operator=(const FeatureEngine &) = delete;
 
-    FeatureEngine &operator=(const FeatureEngine &&) = delete;
+    FeatureEngine &operator=(FeatureEngine &&) = delete;
 
   private:
     std::string time_str_;

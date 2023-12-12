@@ -21,7 +21,7 @@ namespace Trading {
     auto setTradeEngine(TradeEngine *trade_engine) {
       trade_engine_ = trade_engine;
     }
-
+    // this linear iteration is very inefficient and it is need to be improved.
     auto updateBBO(bool update_bid, bool update_ask) noexcept {
       if(update_bid) {
         if(bids_by_price_) {
@@ -61,11 +61,11 @@ namespace Trading {
 
     MarketOrderBook(const MarketOrderBook &) = delete;
 
-    MarketOrderBook(const MarketOrderBook &&) = delete;
+    MarketOrderBook(MarketOrderBook &&) = delete;
 
     MarketOrderBook &operator=(const MarketOrderBook &) = delete;
 
-    MarketOrderBook &operator=(const MarketOrderBook &&) = delete;
+    MarketOrderBook &operator=(MarketOrderBook &&) = delete;
 
   private:
     const TickerId ticker_id_;
