@@ -72,7 +72,7 @@ namespace Trading {
 
     TradeEngine *trade_engine_ = nullptr;
 
-    OrderHashMap oid_to_order_;
+    OrderHashMap oid_to_order_; // market_order*
 
     MemPool<MarketOrdersAtPrice> orders_at_price_pool_;
     MarketOrdersAtPrice *bids_by_price_ = nullptr;
