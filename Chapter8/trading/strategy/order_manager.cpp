@@ -3,10 +3,12 @@
 
 namespace Trading {
   auto OrderManager::newOrder(OMOrder *order, TickerId ticker_id, Price price, Side side, Qty qty) noexcept -> void {
+    // create clientrequest
     const Exchange::MEClientRequest new_request{Exchange::ClientRequestType::NEW, trade_engine_->clientId(), ticker_id,
                                                 next_order_id_, side, price, qty};
+    // set clientrequest by reference.
     trade_engine_->sendClientRequest(&new_request);
-
+    // update the OMOrder object pointer.
     *order = {ticker_id, next_order_id_, side, price, qty, OMOrderState::PENDING_NEW};
     ++next_order_id_;
 

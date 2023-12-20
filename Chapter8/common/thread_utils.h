@@ -4,18 +4,33 @@
 #include <atomic>
 #include <thread>
 #include <unistd.h>
-
 #include <sys/syscall.h>
 
 namespace Common {
   /// Set affinity for current thread to be pinned to the provided core_id.
   inline auto setThreadCore(int core_id) noexcept {
+  # if defined(__linux__) || defined(__linux) || defined(linux)
+    // linux defined code
     cpu_set_t cpuset;
-
     CPU_ZERO(&cpuset);
     CPU_SET(core_id, &cpuset);
 
     return (pthread_setaffinity_np(pthread_self(), sizeof(cpu_set_t), &cpuset) == 0);
+  # elif defined(__APPLE__)
+    // macOs-specific code
+    #include<mach/mach.h>
+    thread_affinity_policy_data_t policyData;
+    policyData.affinity_tag = core_id;
+    kern_return_t result = thread_policy_set(
+      pthread_mach_thread_np(pthread_self()),
+      THREAD_AFFINITY_POLICY,
+      (thread_policy_t)&policyData,
+      THREAD_AFFINITY_POLICY_COUNT
+    );
+    return (result == KERN_SUCCESS);
+  #else
+    return false;
+  #endif 
   }
 
   /// Creates a thread instance, sets affinity on it, assigns it a name and

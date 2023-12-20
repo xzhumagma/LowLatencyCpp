@@ -28,14 +28,18 @@ namespace Trading {
 
       switch (client_response->type_) {
         case Exchange::ClientResponseType::ACCEPTED: {
+          // mark it as accepted and active in the market.
           order->order_state_ = OMOrderState::LIVE;
         }
           break;
         case Exchange::ClientResponseType::CANCELED: {
+          // the order is no longer active in th market.
           order->order_state_ = OMOrderState::DEAD;
         }
           break;
         case Exchange::ClientResponseType::FILLED: {
+          // update the qty_field on OMOrder to be the new leaves_qty_.
+          // This reflects the live quantity that still exists in the market.
           order->qty_ = client_response->leaves_qty_;
           if(!order->qty_)
             order->order_state_ = OMOrderState::DEAD;
@@ -51,7 +55,7 @@ namespace Trading {
     auto newOrder(OMOrder *order, TickerId ticker_id, Price price, Side side, Qty qty) noexcept -> void;
 
     auto cancelOrder(OMOrder *order) noexcept -> void;
-
+    // manages a single order and either sends a new order or cancels an existing order.
     auto moveOrder(OMOrder *order, TickerId ticker_id, Price price, Side side, Qty qty) noexcept {
       switch (order->order_state_) {
         case OMOrderState::LIVE: {
@@ -66,6 +70,7 @@ namespace Trading {
             if(LIKELY(risk_result == RiskCheckResult::ALLOWED))
               newOrder(order, ticker_id, price, side, qty);
             else
+              // log the risk check result if the order is not allowed.
               logger_->log("%:% %() % Ticker:% Side:% Qty:% RiskCheckResult:%\n", __FILE__, __LINE__, __FUNCTION__,
                            Common::getCurrentTimeStr(&time_str_),
                            tickerIdToString(ticker_id), sideToString(side), qtyToString(qty),
@@ -80,6 +85,7 @@ namespace Trading {
     }
 
     auto moveOrders(TickerId ticker_id, Price bid_price, Price ask_price, Qty clip) noexcept {
+      // we can do multiple clip values for buy or sell orders.  
       auto bid_order = &(ticker_side_order_.at(ticker_id).at(sideToIndex(Side::BUY)));
       moveOrder(bid_order, ticker_id, bid_price, Side::BUY, clip);
 
@@ -96,19 +102,23 @@ namespace Trading {
 
     OrderManager(const OrderManager &) = delete;
 
-    OrderManager(const OrderManager &&) = delete;
+    OrderManager(OrderManager &&) = delete;
 
     OrderManager &operator=(const OrderManager &) = delete;
 
-    OrderManager &operator=(const OrderManager &&) = delete;
+    OrderManager &operator=(OrderManager &&) = delete;
 
   private:
+    // We will use this to store the parent TradeEngine instance that is using this order manager.
     TradeEngine *trade_engine_ = nullptr;
+    // This will be used to perform pre-trade risk checks.
     const RiskManager& risk_manager_;
 
     std::string time_str_;
     Common::Logger *logger_ = nullptr;
-
+    // hold a pair (a buy or sell) of OMOrder objects for each trading instrument.
+    // This will be used as a hash map that's indexed first by the TickerId value of the instrument we want to send an order for and then indexed by the 
+    // buy or sell side values to manange the buy or sell order.
     OMOrderTickerSideHashMap ticker_side_order_;
     OrderId next_order_id_ = 1;
   };

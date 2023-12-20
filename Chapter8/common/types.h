@@ -167,8 +167,12 @@ namespace Common {
   };
 
   struct TradeEngineCfg {
+    // what the trading strategies will use as the quantity of the orders that they sent out
     Qty clip_ = 0;
+    // This will be used by the trading strategies and will be used against the feature values to decide if a trading
+    // decision shoudl be made or not.
     double threshold_ = 0;
+    // risk configuration.
     RiskCfg risk_cfg_;
 
     auto toString() const {

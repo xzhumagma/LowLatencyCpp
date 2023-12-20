@@ -4,6 +4,7 @@
 #include <string>
 #include <unordered_set>
 #include <sstream>
+// the epoll.h is not on a macos system
 #include <sys/epoll.h>
 #include <unistd.h>
 #include <sys/types.h>

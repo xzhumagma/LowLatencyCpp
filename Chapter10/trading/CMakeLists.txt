@@ -7,5 +7,6 @@ file(GLOB SOURCES "*/*.cpp")
 
 include_directories(${PROJECT_SOURCE_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/trading)
-
+# the library name is libtrading, the type of the library is static. 
+# The "strategy/risk_manager.cpp" is an additional source code files that should be included in the library.
 add_library(libtrading STATIC ${SOURCES} strategy/risk_manager.cpp)

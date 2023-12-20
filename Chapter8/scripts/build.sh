@@ -5,7 +5,8 @@ CMAKE=$(which cmake)
 NINJA=$(which ninja)
 
 # Specify the source and build directories
-SOURCE_DIR="/home/xpzhu/project/Building-Low-Latency-Applications-with-CPP/Chapter8"
+#SOURCE_DIR="/home/xpzhu/project/Building-Low-Latency-Applications-with-CPP/Chapter8"
+SOURCE_DIR="/Users/xpzhu/Dev/LowLatencyCpp/Chapter8"
 BUILD_DIR="${SOURCE_DIR}/cmake-build-release"
 # Create the build directory if it doesn't exist
 mkdir -p "$BUILD_DIR"
